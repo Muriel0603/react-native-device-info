@@ -150,3 +150,4 @@ console.log("Device Country", DeviceInfo.getDeviceCountry()); // e.g US
 
 console.log("App Instance ID", DeviceInfo.getInstanceID()); // ANDROID ONLY - see https://developers.google.com/instance-id/
 ```
+# react-native-deviceInfo
