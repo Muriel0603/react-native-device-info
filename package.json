@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-device-info@git+https://github.com/aleechou/react-native-device-info.git",
+        "scope": null,
+        "escapedName": "react-native-device-info",
+        "name": "react-native-device-info",
+        "rawSpec": "git+https://github.com/aleechou/react-native-device-info.git",
+        "spec": "git+https://github.com/aleechou/react-native-device-info.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:aleechou/react-native-device-info.git",
+          "sshUrl": "git+ssh://git@github.com/aleechou/react-native-device-info.git",
+          "httpsUrl": "git+https://github.com/aleechou/react-native-device-info.git",
+          "gitUrl": "git://github.com/aleechou/react-native-device-info.git",
+          "shortcut": "github:aleechou/react-native-device-info",
+          "directUrl": "https://raw.githubusercontent.com/aleechou/react-native-device-info/master/package.json"
+        }
+      },
+      "/Users/ios_app_01/runner.camp-uapp"
+    ]
+  ],
+  "_from": "git+https://github.com/aleechou/react-native-device-info.git",
+  "_id": "react-native-device-info@0.9.4",
+  "_inCache": true,
+  "_location": "/react-native-device-info",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-device-info@git+https://github.com/aleechou/react-native-device-info.git",
+    "scope": null,
+    "escapedName": "react-native-device-info",
+    "name": "react-native-device-info",
+    "rawSpec": "git+https://github.com/aleechou/react-native-device-info.git",
+    "spec": "git+https://github.com/aleechou/react-native-device-info.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:aleechou/react-native-device-info.git",
+      "sshUrl": "git+ssh://git@github.com/aleechou/react-native-device-info.git",
+      "httpsUrl": "git+https://github.com/aleechou/react-native-device-info.git",
+      "gitUrl": "git://github.com/aleechou/react-native-device-info.git",
+      "shortcut": "github:aleechou/react-native-device-info",
+      "directUrl": "https://raw.githubusercontent.com/aleechou/react-native-device-info/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/aleechou/react-native-device-info.git#4321a9364eb7edf135090ab12ca1f18cf50910da",
+  "_shasum": "7995e4499a74a6065254415b0979ad598dfb34a6",
+  "_shrinkwrap": null,
+  "_spec": "react-native-device-info@git+https://github.com/aleechou/react-native-device-info.git",
+  "_where": "/Users/ios_app_01/runner.camp-uapp",
+  "author": {
+    "name": "Rebecca Hughes",
+    "email": "rebecca@learnium.net",
+    "url": "https://github.com/rebeccahughes"
+  },
+  "bugs": {
+    "url": "https://github.com/rebeccahughes/react-native-device-info/issues"
+  },
+  "dependencies": {},
+  "description": "Get device information using react-native",
+  "devDependencies": {},
+  "gitHead": "4321a9364eb7edf135090ab12ca1f18cf50910da",
+  "homepage": "https://github.com/rebeccahughes/react-native-device-info#readme",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "device",
+    "events",
+    "cocoapod"
+  ],
+  "license": "MIT",
+  "main": "deviceinfo.js",
+  "name": "react-native-device-info",
+  "optionalDependencies": {},
+  "readme": "# react-native-device-info\n\n[![npm version](https://badge.fury.io/js/react-native-device-info@2x.png)](http://badge.fury.io/js/react-native-device-info)\n\nDevice Information for [React Native](https://github.com/facebook/react-native)\n\n## Install\n\n```shell\nnpm install --save react-native-device-info\n```\n\n## Automatically link\n\n#### With React Native 0.27+\n\n```shell\nreact-native link react-native-device-info\n```\n\n#### With older versions of React Native\n\nYou need [`rnpm`](https://github.com/rnpm/rnpm) (`npm install -g rnpm`)\n\n```shell\nrnpm link react-native-device-info\n```\n\n## Manually link\n\n### iOS (via Cocoa Pods)\nAdd the following line to your build targets in your `Podfile`\n\n`pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'`\n\nThen run `pod install`\n\n### iOS (without Cocoa Pods)\n\nIn XCode, in the project navigator:\n- Right click _Libraries_\n- Add Files to _[your project's name]_\n- Go to `node_modules/react-native-device-info`\n- Add the `.xcodeproj` file\n\nIn XCode, in the project navigator, select your project.\n- Add the `libRNDeviceInfo.a` from the _deviceinfo_ project to your project's _Build Phases ➜ Link Binary With Libraries_\n- Click `.xcodeproj` file you added before in the project navigator and go the _Build Settings_ tab. Make sure _All_ is toggled on (instead of _Basic_).\n- Look for _Header Search Paths_ and make sure it contains both `$(SRCROOT)/../react-native/React` and `$(SRCROOT)/../../React` \n- Mark both as recursive (should be OK by default).\n\nRun your project (Cmd+R)\n\n(Thanks to @brysgo for writing the instructions)\n\n### Android\n\n#### With React Native 0.29+\n\n- in `MainApplication.java`:\n\n```diff\n+ import com.learnium.RNDeviceInfo.RNDeviceInfo;\n\n  public class MainApplication extends Application implements ReactApplication {\n    //......\n\n    @Override\n    protected List<ReactPackage> getPackages() {\n      return Arrays.<ReactPackage>asList(\n+         new RNDeviceInfo(),\n          new MainReactPackage()\n      );\n    }\n    \n    ......\n  }\n```\n\n#### With older versions of React Native:\n\n- in `MainActivity.java`:\n\n```diff\n+ import com.learnium.RNDeviceInfo.RNDeviceInfo;\n\n  public class MainActivity extends ReactActivity {\n    ......\n\n    @Override\n    protected List<ReactPackage> getPackages() {\n      return Arrays.<ReactPackage>asList(\n+       new RNDeviceInfo(),\n        new MainReactPackage()\n      );\n    }\n  }\n```\n\n(Thanks to @chirag04 for writing the instructions)\n\n## Device Name\n\nIf you want to get the device name in Android add this to your `AndroidManifest.xml` (optional):\n\n```xml\n...\n<uses-permission android:name=\"android.permission.BLUETOOTH\"/>\n```\n\n## Release Notes\n\nSee [CHANGELOG.md](https://github.com/rebeccahughes/react-native-device-info/blob/master/CHANGELOG.md)\n\n## Example\n\n```js\nvar DeviceInfo = require('react-native-device-info');\n\nconsole.log(\"Device Unique ID\", DeviceInfo.getUniqueID());  // e.g. FCDBD8EF-62FC-4ECB-B2F5-92C9E79AC7F9\n// * note this is IDFV on iOS so it will change if all apps from the current apps vendor have been previously uninstalled\n\nconsole.log(\"Device Manufacturer\", DeviceInfo.getManufacturer());  // e.g. Apple\n\nconsole.log(\"Device Brand\", DeviceInfo.getBrand());  // e.g. Apple / htc / Xiaomi\n\nconsole.log(\"Device Model\", DeviceInfo.getModel());  // e.g. iPhone 6\n\nconsole.log(\"Device ID\", DeviceInfo.getDeviceId());  // e.g. iPhone7,2 / or the board on Android e.g. goldfish\n\nconsole.log(\"System Name\", DeviceInfo.getSystemName());  // e.g. iPhone OS\n\nconsole.log(\"System Version\", DeviceInfo.getSystemVersion());  // e.g. 9.0\n\nconsole.log(\"Bundle ID\", DeviceInfo.getBundleId());  // e.g. com.learnium.mobile\n\nconsole.log(\"Build Number\", DeviceInfo.getBuildNumber());  // e.g. 89\n\nconsole.log(\"App Version\", DeviceInfo.getVersion());  // e.g. 1.1.0\n\nconsole.log(\"App Version (Readable)\", DeviceInfo.getReadableVersion());  // e.g. 1.1.0.89\n\nconsole.log(\"Device Name\", DeviceInfo.getDeviceName());  // e.g. Becca's iPhone 6\n\nconsole.log(\"User Agent\", DeviceInfo.getUserAgent()); // e.g. Dalvik/2.1.0 (Linux; U; Android 5.1; Google Nexus 4 - 5.1.0 - API 22 - 768x1280 Build/LMY47D)\n\nconsole.log(\"Device Locale\", DeviceInfo.getDeviceLocale()); // e.g en-US\n\nconsole.log(\"Device Country\", DeviceInfo.getDeviceCountry()); // e.g US\n\nconsole.log(\"App Instance ID\", DeviceInfo.getInstanceID()); // ANDROID ONLY - see https://developers.google.com/instance-id/\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeccahughes/react-native-device-info.git"
+  },
+  "version": "0.9.4"
+}
